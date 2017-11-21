@@ -1,7 +1,7 @@
 <template>
 	<div class="todo">
 		<div class="add-item-container">
-			<input v-model="inputItem" @keyup.enter="addItem"/>
+			<input v-model="inputItem" @keyup.enter="addItem" id="itemInput"/>
 		</div>
 		<div class="item-list-container">
 			<TodoList @delItem="delItem" :items="itemList"></TodoList>

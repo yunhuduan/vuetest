@@ -1,6 +1,7 @@
 <template>
 	<div class="todo-list">
 		<TodoItem v-for="(item, index) in items" :key="index" :data="item" :idx="index" @delItem="del"></TodoItem>
+		<p class="no-data" v-if="items.length <= 0">请输入项目</p>
 	</div>
 </template>
 
@@ -8,6 +9,7 @@
 	import TodoItem from './TodoItem.vue'
 
 	export default {
+		name: 'todoList',
 		props: {
 			items: {
 				type: Array,
