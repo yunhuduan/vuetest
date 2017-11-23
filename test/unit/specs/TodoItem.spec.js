@@ -26,6 +26,7 @@ describe('TodoItem.vue', () => {
 				idx: index
 			}
 		})
+		//需要找到操作按钮a标签触发点击事件
 		wrapper.find('.item-op').trigger('click');
 		//wrapper.emitted().delItem : [[0]]
 		expect(wrapper.emitted().delItem.length).to.equal(1);
